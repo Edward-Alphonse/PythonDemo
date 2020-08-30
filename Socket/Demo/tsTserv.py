@@ -10,7 +10,7 @@ tcpSerSocket = socket(AF_INET, SOCK_STREAM)
 tcpSerSocket.bind(ADDR)
 tcpSerSocket.listen(5)
 while True:
-    print "Waitting for connection"
+    print ("Waitting for connection")
     tcpCliSock, addr = tcpSerSocket.accept()
     print "...connected from:", addr
 
@@ -23,3 +23,4 @@ while True:
         tcpCliSock.send('[%s] %s' %(ctime(), str))
     tcpCliSock.close()
 tcpSerSocket.close()
+
